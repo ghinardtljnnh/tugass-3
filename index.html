@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Pribadi Saya</title>
+
+    <style>
+        /* =========================
+           STYLE UMUM
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        /* =========================
+           PROFIL
+        ========================== */
+
+        .profile-section {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .profile-image img {
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .profile-text {
+            flex: 1;
+        }
+
+        /* =========================
+           TABEL
+        ========================== */
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 30px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #999;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #ddd;
+        }
+
+        /* =========================
+           LIST HOBI
+        ========================== */
+
+        .list-container {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .list-box {
+            flex: 1;
+            min-width: 250px;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        ul,
+        ol {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        /* =========================
+           FORM
+        ========================== */
+
+        form {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        /* Tablet */
+        @media (max-width: 768px) {
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .list-container {
+                flex-direction: column;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 480px) {
+            body {
+                font-size: 14px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         CONTAINER UTAMA
+    ========================== -->
+
+    <div class="container" id="utama" title="Halaman Profil Pribadi">
+
+        <!-- Judul -->
+        <h1 class="judul-halaman">Profil Pribadi Saya</h1>
+
+        <!-- =========================
+             BAGIAN PROFIL
+        ========================== -->
+
+        <section class="profile-section">
+
+            <!-- Gambar Profil -->
+            <div class="profile-image">
+                <!-- Gunakan path relatif -->
+                <img src="ginaa.jpeg" alt="Foto Profil Saya" width="200" height="200">
+            </div>
+
+            <!-- Informasi Singkat -->
+            <div class="profile-text">
+
+                <p id="nama">
+                    <strong>Nama Lengkap:</strong> Ghina Raudhatul Janna
+                </p>
+
+                <p class="nim">
+                    <strong>NIM:</strong> 246250020
+                </p>
+
+                <p title="Informasi Hobi">
+                    <strong>Hobi:</strong> Jalan-jalan, jajan, dan mendengarkan musik
+                </p>
+
+            </div>
+        </section>
+
+        <!-- =========================
+             TABEL BIODATA
+        ========================== -->
+
+        <section>
+
+            <h2>Biodata</h2>
+
+            <table>
+
+                <tr>
+                    <th>Data</th>
+                    <th>Keterangan</th>
+                </tr>
+
+                <tr>
+                    <td>Nama</td>
+                    <td>Ghina Raudhatul Janna</td>
+                </tr>
+
+                <tr>
+                    <td>Tanggal Lahir</td>
+                    <td>03 februari 2006</td>
+                </tr>
+
+                <tr>
+                    <td>Alamat</td>
+                    <td>Palu, Indonesia</td>
+                </tr>
+
+                <tr>
+                    <td>Email</td>
+                    <td>ghinardtljnnh@gmail.com</td>
+                </tr>
+
+            </table>
+
+        </section>
+
+        <!-- =========================
+             LIST HOBI
+        ========================== -->
+
+        <section>
+
+            <h2>Daftar Hobi & Aktivitas</h2>
+
+            <div class="list-container">
+
+                <!-- Unordered List -->
+                <div class="list-box">
+                    <h3>Hobi Favorit</h3>
+
+                    <ul>
+                        <li>Jajan</li>
+                        <li>Menonton Film</li>
+                        <li>Jalan-jalan</li>
+                    </ul>
+                </div>
+
+                <!-- Ordered List -->
+                <div class="list-box">
+                    <h3>Aktivitas Harian</h3>
+
+                    <ol>
+                        <li>Bangun Pagi</li>
+                        <li>Kuliah</li>
+                        <li>Belajar Coding</li>
+                    </ol>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+             FORMULIR
+        ========================== -->
+
+        <section>
+
+            <h2>Formulir Data Diri</h2>
+
+            <form action="#" method="post">
+
+                <!-- Nama -->
+                <div class="form-group">
+                    <label for="namaLengkap">Nama:</label>
+                    <input type="text" id="namaLengkap" name="namaLengkap"
+                        placeholder="Masukkan nama lengkap">
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email"
+                        placeholder="Masukkan email">
+                </div>
+
+                <!-- Jenis Kelamin -->
+                <div class="form-group">
+
+                    <label>Jenis Kelamin:</label>
+
+                    <div class="radio-group">
+                        <input type="radio" id="laki" name="gender">
+                        <label for="laki">Laki-laki</label>
+
+                        <input type="radio" id="perempuan" name="gender">
+                        <label for="perempuan">Perempuan</label>
+                    </div>
+
+                </div>
+
+                <!-- Hobi -->
+                <div class="form-group">
+
+                    <label>Hobi:</label>
+
+                    <div class="checkbox-group">
+
+                        <input type="checkbox" id="game">
+                        <label for="game">Game</label>
+
+                        <br>
+
+                        <input type="checkbox" id="musik">
+                        <label for="musik">Musik</label>
+
+                        <br>
+
+                        <input type="checkbox" id="coding">
+                        <label for="coding">Coding</label>
+
+                    </div>
+
+                </div>
+
+                <!-- Tombol -->
+                <button type="submit">Submit</button>
+
+            </form>
+
+        </section>
+
+    </div>
+
+</body>
+
+</html>
